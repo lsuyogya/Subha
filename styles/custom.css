@@ -1,0 +1,412 @@
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../assets/font/PlayfairDisplay-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../assets/font/PlayfairDisplay-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Khula";
+  src: url("../assets/font/Khula-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Khula";
+  src: url("../assets/font/Khula-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Khula";
+  src: url("../assets/font/Khula-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Khula";
+  src: url("../assets/font/Khula-ExtraBold.ttf");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Khula";
+  src: url("../assets/font/Khula-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-Black.ttf");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-BlackItalic.ttf");
+  font-style: italic;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-LightItalic.ttf");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/font/Lato-Italic.ttf");
+  font-style: italic;
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.breakoutFullwidth {
+  grid-column-start: breakout-start;
+  grid-column-end: fullWidth-end;
+}
+
+.contentFullwidth {
+  grid-column-start: breakout-start;
+  grid-column-end: fullWidth-end;
+}
+
+.content {
+  grid-column: content;
+}
+
+.breakout {
+  grid-column: breakout;
+}
+
+.fullWidth {
+  grid-column: fullWidth;
+}
+
+.fullHeight {
+  height: 100dvh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+}
+
+img, video {
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: var(--secondaryFont);
+  color: var(--headingGreyColor);
+  font-size: var(--headingFS);
+}
+
+.largeHeadingTxt, .fullMediaWrapper .contentWrapper h1 {
+  font-size: var(--largeHeadingFS);
+  line-height: var(--largeHeadingLH);
+  font-weight: 700;
+}
+
+.regularTxt {
+  font-size: var(--regualarFS);
+}
+
+.mdTxt {
+  font-size: var(--mdFS);
+}
+
+.lgTxt {
+  font-size: var(--lgFS);
+}
+
+.h2 {
+  color: var(--headingGreyColor);
+  font-size: var(--h2FS);
+  line-height: var(--h2LH);
+}
+
+.w700 {
+  font-weight: 700;
+}
+
+.w600 {
+  font-weight: 600;
+}
+
+.w300 {
+  font-weight: 300;
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.txtLight {
+  color: var(--lightColor);
+}
+
+.txtBodyGrey {
+  color: var(--bodyGreyColor);
+}
+
+.txtHeadingGrey {
+  color: var(--headingGreyColor);
+}
+
+.txtCenter {
+  text-align: center;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+[class*=btn] {
+  white-space: nowrap;
+  padding-block: 0.75rem;
+  padding-inline: 1.75rem;
+  cursor: pointer;
+  margin-block: 1rem;
+}
+
+.btn-sm {
+  max-width: fit-content;
+}
+
+.btn-light-glass {
+  border: 1px solid var(--lightColor);
+  color: var(--lightColor);
+  background-color: transparent;
+}
+
+.relative {
+  position: relative;
+}
+
+.grid {
+  display: grid;
+}
+
+.placeCenter {
+  place-content: center;
+  place-items: center;
+}
+
+.pattern {
+  display: none;
+}
+@media (min-width: 768px) {
+  .pattern {
+    display: block;
+    position: absolute;
+    inset-inline-start: var(--insetInlineStart, 0%);
+    inset-inline-end: var(--insetInlineEnd, 0%);
+    inset-block-start: var(--insetBlockStart, 0%);
+    inset-block-end: var(--insetBlockEnd, 0%);
+  }
+}
+
+.starPattern {
+  background-image: url("../assets/images/star-patterns.png");
+}
+
+.sectionGap {
+  margin-block: 4rem;
+}
+
+:root {
+  --lightColor: #fff;
+  --headingGreyColor: #2e2e2e;
+  --bodyGreyColor: #4e4e4e;
+  --largeHeadingFS: 88px;
+  --largeHeadingLH: 87px;
+  --h2FS: 28px;
+  --h2LH: 27px;
+  --lgFS:32px;
+  --headingFS: 50px;
+  --regualarFS: 16px;
+  --mdFS: 18px;
+  --smFS: 14px;
+  --secondaryFont: "PlayfairDisplay";
+  --primaryFont: "Khula";
+  --tertiaryFont: "Lato";
+  font-family: var(--primaryFont);
+}
+
+.mainGrid {
+  --content-size: 1280px;
+  /* --content-width: min(100%, var(--content-size)); */
+  --breakout-size: 1366px;
+  --breakout-width: minmax(0px, calc((var(--breakout-size) - var(--content-size)) / 2 ));
+  --padding-inline: 2rem;
+  --fullWidth-width: minmax(var(--padding-inline), 100%);
+  --content-width: min( calc(100% - var(--padding-inline) * 2) , var(--content-size));
+  display: grid;
+  grid-template-columns: [fullWidth-start] var(--fullWidth-width) [breakout-start] var(--breakout-width) [content-start] var(--content-width) [content-end] var(--breakout-width) [breakout-end] var(--fullWidth-width) [fullWidth-end];
+}
+
+.fullMediaWrapper {
+  position: relative;
+}
+.fullMediaWrapper video, .fullMediaWrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.fullMediaWrapper .contentWrapper {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+}
+.fullMediaWrapper .contentWrapper h1 {
+  max-width: 23ch;
+  color: var(--lightColor);
+}
+.fullMediaWrapper .contentWrapper small {
+  font-size: var(--mdFS);
+}
+
+.overlappingSection {
+  margin-block: 2rem;
+  z-index: 0;
+  background: var(--lightColor);
+  display: grid;
+  padding-block: 2rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .overlappingSection {
+    margin-block: 10rem;
+    padding-block: 0;
+    margin-top: -20dvh;
+    grid-template-columns: 45fr 55fr;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.0509803922);
+  }
+  .overlappingSection .grid-item {
+    padding-block: 5.5rem;
+  }
+  .overlappingSection:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0px 18px 18px 0px rgba(0, 0, 0, 0.0392156863);
+  }
+  .overlappingSection:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0px 40px 24px 0px rgba(0, 0, 0, 0.031372549);
+  }
+}
+.overlappingSection .contentWrapper {
+  padding-block-start: 1rem;
+  display: grid;
+  height: fit-content;
+  gap: 2rem;
+  place-self: center;
+}
+@media (min-width: 768px) {
+  .overlappingSection .contentWrapper {
+    padding-inline: 5.3125rem;
+    padding-block-start: 0;
+  }
+}
+
+.whyContainer {
+  display: grid;
+  margin-block-start: 2rem;
+  gap: 2rem;
+}
+@media (min-width: 769px) {
+  .whyContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0;
+  }
+}
+.whyContainer .txtWrapperLeft, .whyContainer .txtWrapperRight {
+  font-family: var(--tertiaryFont);
+  display: grid;
+  place-content: center;
+  gap: 4rem;
+}
+@media (max-width: 769px) {
+  .whyContainer .txtWrapperLeft, .whyContainer .txtWrapperRight {
+    order: 1;
+    gap: 2rem;
+    place-content: start;
+  }
+}
+.whyContainer .txtWrapperLeft .txtItem, .whyContainer .txtWrapperRight .txtItem {
+  display: grid;
+  text-align: end;
+  height: fit-content;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 3.5rem;
+  color: #4E4E4E;
+  font-size: var(--smFs);
+}
+.whyContainer .txtWrapperLeft .txtItem .icon, .whyContainer .txtWrapperRight .txtItem .icon {
+  grid-row: span 2;
+}
+@media (max-width: 769px) {
+  .whyContainer .txtWrapperLeft .txtItem, .whyContainer .txtWrapperRight .txtItem {
+    text-align: start;
+    grid-template-columns: 3.5rem 1fr;
+  }
+  .whyContainer .txtWrapperLeft .txtItem :not([class*=icon]), .whyContainer .txtWrapperRight .txtItem :not([class*=icon]) {
+    order: 1;
+  }
+}
+.whyContainer .txtWrapperRight .txtItem {
+  text-align: start;
+  grid-template-columns: 3.5rem 1fr;
+}
+.whyContainer .txtWrapperRight .txtItem :not([class*=icon]) {
+  order: 1;
+}
+
+.productSliderGrid {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+}
+
+/*# sourceMappingURL=custom.css.map */

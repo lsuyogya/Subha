@@ -4,10 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/custom.css">
+    <link rel="stylesheet" href="./styles/splide-core.min.css">
+    <script defer src="./assets/js/splide.min.js"></script>
 </head>
 <body>
     <header></header>
-    <main></main>
+    <main class="mainGrid">
+        <section class="fullWidth fullHeight fullMediaWrapper">
+            <!-- <video src="./assets/video/dummyVid.mp4" autoplay loop></video> -->
+            <video src="./assets/video/dummyVid.mp4"></video>
+            <div class="contentWrapper txtLight txtCenter">
+                <h1>Modern Interpretation Of An Ancient Classic</h1>
+                <small>Discover Timeless Beauty in Our Contemporary Subha Collection</small>
+                <button class="btn-light-glass btn-sm upper"><span>Shop Now</span></button>
+            </div>
+        </section>
+
+        <section class="breakout overlappingSection"> 
+            <div class="grid-item imgWrapper">
+                <img src="./assets/images/About subha black bg.png" alt="">
+            </div>
+            <div class="grid-item relative grid center">
+                <div class="contentWrapper">
+                    <h1>What is Subha?</h1>
+                    <p class="h2">The literal translation is concept that bound between <strong>“beautiful”</strong> and <strong>“charm”.</strong></h2>
+                    <p class="txtBodyGrey">Beads have played a key role in human history. They have been viewed as mystical object, jewels, talismans and meditation items. No matter the origin or material, beads have been close to the human body and soul for centuries. Subha has been an essential product for many men and women in the Arab world. No gulf native feel whole unless he or she has a Subha close.</p>
+                </div>
+                <div class="pattern starPattern" style="--insetInlineStart: 30%;">
+
+                </div>
+            </div>
+        </section>
+        <section class="breakout">
+            <h2 class="txtCenter">Why is our Subha unique?</h2>
+            <div class="whyContainer">
+                <div class="txtWrapperLeft">
+                    <div class="txtItem">
+                        <div class="txtHeadingGrey w700 mdTxt upper">Create with PLA</div>
+                        <div class="icon"><img src="./assets/icons/PLA.svg" alt=""></div>
+                        <div class="description">We manufacture our Subhas using state-of-the-art 3D printing </div>
+                    </div>
+                    <div class="txtItem">
+                        <div class="txtHeadingGrey w700 mdTxt upper">Create with PLA</div>
+                        <div class="icon"><img src="./assets/icons/EcoFriendly.svg" alt=""></div>
+                        <div class="description">This eco-friendly technology results in splendid Subhas </div>
+                    </div>
+                    <div class="txtItem">
+                        <div class="txtHeadingGrey w700 mdTxt upper">Hand Crafted</div>
+                        <div class="icon"><img src="./assets/icons/HandCrafted.svg" alt=""></div>
+                        <div class="description">The 33 beads are combined using cotton or silk by hand. </div>
+                    </div>
+                </div>
+                <div class="imgWrapper">
+                    <img src="./assets/images/Unique 1.png" alt="">
+                </div>
+                <div class="txtWrapperRight">
+                    <div class="txtItem">
+                        <div class="txtHeadingGrey w700 mdTxt upper">Variety of Colors</div>
+                        <div class="icon"><img src="./assets/icons/VarietyofColors.svg" alt=""></div>
+                        <div class="description">The beads have a unique texture and a degree of thickness </div>
+                    </div>
+                    <div class="txtItem">
+                        <div class="txtHeadingGrey w700 mdTxt upper">Unique Texture</div>
+                        <div class="icon"><img src="./assets/icons/UniqueTexture.svg" alt=""></div>
+                        <div class="description">The Subhas come in different sizes and are bonded  </div>
+                    </div>
+                    <div class="txtItem">
+                        <div class="txtHeadingGrey w700 mdTxt upper">Top-of-the-art 3D printing</div>
+                        <div class="icon"><img src="./assets/icons/Top-of-the-art3DPrinting.svg" alt=""></div>
+                        <div class="description">The Subhas come in different sizes and are bonded   </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breakoutFullwidth sectionGap productSliderSection">
+            <h2>Our Products</h1>
+            <div class="productSliderGrid">
+                <div id="txtSplide" class="splideTxt splide" role="group" aria-label="Text Slider">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                <div class="txtWrapper">
+                                    <h3 class="lgFS">Kandorah Subha</h3>
+                                    <p>A unique blue-white color, the exceptional “Juwait” of the modern Emirati Kandorah, a shade that we finally obtained in our 3D printers to make our color matching Subhas reflecting the Emirati Kandorah, designed with classic shape and size beads.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="txtWrapper">
+                                    <h3 class="lgFS">Kandorah Subha 2</h3>
+                                    <p>A unique blue-white color, the exceptional “Juwait” of the modern Emirati Kandorah, a shade that we finally obtained in our 3D printers to make our color matching Subhas reflecting the Emirati Kandorah, designed with classic shape and size beads.</p>
+                                </div>
+                              </li>
+                          </ul>
+                    </div>
+                  </div>
+
+                  <div id="imgSplide" class="splideImg splide" role="group" aria-label="Image Slider">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                <div class="slide" data-slideNo="1">
+                                    <img src="./assets/images/1.jpg" alt="">
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="slide" data-slideNo="2">
+                                    <img src="./assets/images/2.jpg" alt="">
+                                </div>
+                              </li>
+                          </ul>
+                    </div>
+                  </div>
+            </div>
+            <script defer src="./assets/js/splideInit.js"></script>
+        </section>
+    </main>
     <footer></footer>
 </body>
 </html>
