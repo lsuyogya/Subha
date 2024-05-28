@@ -123,12 +123,19 @@ header {
   top: 0;
 }
 
-img, video {
+img,
+video {
   height: 100%;
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, .title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
   font-family: var(--secondaryFont);
   color: var(--headingGreyColor);
   font-size: var(--headingFS);
@@ -255,7 +262,7 @@ h1, h2, h3, h4, h5, h6, .title {
   --largeHeadingLH: 87px;
   --h2FS: 28px;
   --h2LH: 27px;
-  --lgFS:32px;
+  --lgFS: 32px;
   --headingFS: 50px;
   --regualarFS: 16px;
   --mdFS: 18px;
@@ -270,10 +277,16 @@ h1, h2, h3, h4, h5, h6, .title {
   --content-size: 1280px;
   /* --content-width: min(100%, var(--content-size)); */
   --breakout-size: 1366px;
-  --breakout-width: minmax(0px, calc((var(--breakout-size) - var(--content-size)) / 2 ));
+  --breakout-width: minmax(
+    0px,
+    calc((var(--breakout-size) - var(--content-size)) / 2)
+  );
   --padding-inline: 2rem;
   --fullWidth-width: minmax(var(--padding-inline), 100%);
-  --content-width: min( calc(100% - var(--padding-inline) * 2) , var(--content-size));
+  --content-width: min(
+    calc(100% - var(--padding-inline) * 2),
+    var(--content-size)
+  );
   display: grid;
   grid-template-columns: [fullWidth-start] var(--fullWidth-width) [breakout-start] var(--breakout-width) [content-start] var(--content-width) [content-end] var(--breakout-width) [breakout-end] var(--fullWidth-width) [fullWidth-end];
 }
@@ -281,7 +294,8 @@ h1, h2, h3, h4, h5, h6, .title {
 .fullMediaWrapper {
   position: relative;
 }
-.fullMediaWrapper video, .fullMediaWrapper img {
+.fullMediaWrapper video,
+.fullMediaWrapper img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -381,7 +395,7 @@ h1, h2, h3, h4, h5, h6, .title {
   height: fit-content;
   gap: 0.75rem;
   grid-template-columns: 1fr 3.5rem;
-  color: #4E4E4E;
+  color: #4e4e4e;
   font-size: var(--smFs);
 }
 .whyContainer .txtWrapperLeft .txtItem .icon, .whyContainer .txtWrapperRight .txtItem .icon {
@@ -406,7 +420,29 @@ h1, h2, h3, h4, h5, h6, .title {
 
 .productSliderGrid {
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: 30% 70%;
+}
+
+.splide__arrows {
+  order: 1;
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  /* margin-inline: auto; */
+  display: flex;
+  gap: 1rem;
+  place-content: center;
+}
+.splide__arrows > :first-child {
+  transform: scaleX(-1);
+}
+.splide__arrows button {
+  background-color: transparent;
+  border: none;
+}
+
+.splideImg li.is-active {
+  scale: 1.3;
 }
 
 /*# sourceMappingURL=custom.css.map */
