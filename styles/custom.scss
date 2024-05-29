@@ -224,7 +224,9 @@
 .splide__track {
   height: calc(100% - var(--_arrows-height, 2rem));
 }
-
+.splide__list {
+  max-width: calc(100vw - 2 * var(--padding-inline));
+}
 .splideImg {
   --_width: 30%;
   ul {
@@ -275,9 +277,12 @@
       margin-block: 1rem;
     }
   }
-  li:not(.is-active) {
-    display: none;
-  }
+  //   li:is(.is-active) {
+  //     display: block;
+  //   }
+  //   li:not(.is-active) {
+  //     display: none;
+  //   }
 }
 .miniSlideGrid {
   display: grid;

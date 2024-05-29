@@ -503,6 +503,10 @@ h6,
   height: calc(100% - var(--_arrows-height, 2rem));
 }
 
+.splide__list {
+  max-width: calc(100vw - 2 * var(--padding-inline));
+}
+
 .splideImg {
   --_width: 30%;
 }
@@ -548,9 +552,6 @@ h6,
   font-size: var(--lgFS);
   font-weight: 500;
   margin-block: 1rem;
-}
-.splideTxt li:not(.is-active) {
-  display: none;
 }
 
 .miniSlideGrid {
