@@ -15,14 +15,16 @@
         <script defer>
             document.addEventListener("DOMContentLoaded", function() {
                 const headerSection = document.querySelector('.headerSection');
+                const logo = headerSection.querySelector('img');
                 const checkScroll = () => {
-                    console.log(window.scrollY)
                     const scrolled = window.scrollY;
                     const viewportHeight = window.innerHeight;
                     if (scrolled > (0.8 * viewportHeight)) {
                         headerSection.style.backgroundColor = 'var(--lightColor)';
+                        logo.style.filter = 'none'; // or appropriate filter for original color
                     } else {
                         headerSection.style.backgroundColor = 'transparent'; // or your default color
+                        logo.style.filter = 'invert(1)'; // This inverts the colors, turning black to white
                     }
                 };
         
