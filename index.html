@@ -12,11 +12,30 @@
     <header class="headerSection">
         <img src="./assets/icons/Subha logo.svg" alt="">
         <button class="langBtn">EN</button>
+        <script defer>
+            document.addEventListener("DOMContentLoaded", function() {
+                const headerSection = document.querySelector('.headerSection');
+                const checkScroll = () => {
+                    console.log(window.scrollY)
+                    const scrolled = window.scrollY;
+                    const viewportHeight = window.innerHeight;
+                    if (scrolled > (0.8 * viewportHeight)) {
+                        headerSection.style.backgroundColor = 'var(--lightColor)';
+                    } else {
+                        headerSection.style.backgroundColor = 'transparent'; // or your default color
+                    }
+                };
+        
+                window.addEventListener('scroll', checkScroll);
+                // Initial check in case the page loads already scrolled
+                checkScroll();
+            });
+        </script>
     </header>
     <main class="mainGrid">
         <section class="fullWidth fullHeight fullMediaWrapper">
-            <!-- <video src="./assets/video/dummyVid.mp4" autoplay loop></video> -->
-            <video src="./assets/video/dummyVid.mp4"></video>
+            <video src="./assets/video/dummyVid.mp4" autoplay loop></video>
+            <!-- <video src="./assets/video/dummyVid.mp4"></video> -->
             <div class="contentWrapper txtLight txtCenter">
                 <h1>Modern Interpretation Of An Ancient Classic</h1>
                 <small>Discover Timeless Beauty in Our Contemporary Subha Collection</small>
