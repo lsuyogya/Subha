@@ -24,19 +24,4 @@ document.addEventListener('DOMContentLoaded', function () {
   thumbnails.mount();
   imgSlide = document.getElementById('imgSplide');
   slideComponents = imgSlide.querySelectorAll('.splide__slide');
-  // console.log(slideComponents);
-
-  slideWidth = 'calc(100% / imgSlidePerPage - marginRight)';
-  const firstSlideWidth = `calc(100% / ${imgSlidePerPage} - ${marginRight} + 5%)`;
-  // const otherSlideWidth = `calc(100% / ${imgSlidePerPage} - ${marginRight} - 5% / ${imgSlidePerPage})`;
-  const otherSlideWidth = `calc(100%)`;
-
-  slideComponents.forEach((slide, index) => {
-    console.log(slide);
-    if (index != 1) {
-      slide.style.width = otherSlideWidth;
-      return;
-    }
-    slide.style.width = firstSlideWidth;
-  });
 });

@@ -97,6 +97,18 @@
                                     <p>A unique blue-white color, the exceptional “Juwait” of the modern Emirati Kandorah, a shade that we finally obtained in our 3D printers to make our color matching Subhas reflecting the Emirati Kandorah, designed with classic shape and size beads.</p>
                                 </div>
                               </li>
+                              <li class="splide__slide">
+                                <div class="txtWrapper">
+                                    <h3 class="lgFS">Kandorah Subha</h3>
+                                    <p>A unique blue-white color, the exceptional “Juwait” of the modern Emirati Kandorah, a shade that we finally obtained in our 3D printers to make our color matching Subhas reflecting the Emirati Kandorah, designed with classic shape and size beads.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="txtWrapper">
+                                    <h3 class="lgFS">Kandorah Subha 2</h3>
+                                    <p>A unique blue-white color, the exceptional “Juwait” of the modern Emirati Kandorah, a shade that we finally obtained in our 3D printers to make our color matching Subhas reflecting the Emirati Kandorah, designed with classic shape and size beads.</p>
+                                </div>
+                              </li>
                           </ul>
                     </div>
                   </div>
@@ -105,17 +117,54 @@
                     <div class="splide__track">
                           <ul class="splide__list">
                               <li class="splide__slide">
-                                <div class="slide" data-slideNo="1">
-                                    <img src="./assets/images/1.jpg" alt="">
+                                <div class="slide">
+                                    <img src="./assets/images/kandoora_1-1090x1536.jpg" alt="">
                                 </div>
                               </li>
                               <li class="splide__slide">
-                                <div class="slide" data-slideNo="2">
-                                    <img src="./assets/images/2.jpg" alt="">
+                                <div class="slide">
+                                    <img src="./assets/images/deep-ocean_2-1090x1536.jpg" alt="">
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="slide">
+                                    <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="slide">
+                                    <img src="./assets/images/mini-white_3-1090x1536.jpg" alt="">
                                 </div>
                               </li>
                           </ul>
                     </div>
+                    <script defer>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const imgSplide = document.getElementById('imgSplide');
+                            const splideList = document.querySelector('.splide__list');
+                        
+                            function updateMinHeight() {
+                                const liElements = imgSplide.querySelectorAll('li');
+                                let maxHeight = 0;
+                        
+                                liElements.forEach(li => {
+                                    const liHeight = li.offsetHeight;
+                                    if (liHeight > maxHeight) {
+                                        maxHeight = liHeight;
+                                    }
+                                });
+                        
+                                splideList.style.minHeight = `${maxHeight}px`;
+                            }
+                        
+                            // Initial call to set the min-height
+                            updateMinHeight();
+                        
+                            // Listen for resize events to update min-height dynamically
+                            window.addEventListener('resize', updateMinHeight);
+                        });
+                        </script>
+                        
                   </div>
             </div>
             <script defer src="./assets/js/splideInit.js"></script>
