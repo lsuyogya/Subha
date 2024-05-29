@@ -21,6 +21,9 @@
 .fullWidth {
   grid-column: fullWidth;
 }
+.fullCol {
+  grid-column: 1 / -1;
+}
 
 .fullHeight {
   height: 100dvh;
@@ -138,6 +141,18 @@ h6,
   background-image: url('../assets/images/star-patterns.png');
 }
 
-.sectionGap {
-  margin-block: 4rem;
+.sectionGap:not([class*='Bg']) {
+  margin-block: var(--sectionGap);
+}
+.sectionGap[class*='Bg'] {
+  padding-block: var(--sectionGap);
+}
+.sectionGapEnd {
+  padding-block-start: var(--sectionGap);
+}
+.greyBg {
+  background-color: var(--bgGreyColor);
+}
+.footerBg {
+  background-color: var(--footerColor);
 }

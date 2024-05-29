@@ -9,7 +9,10 @@
     <script defer src="./assets/js/splide.min.js"></script>
 </head>
 <body>
-    <header></header>
+    <header class="headerSection">
+        <img src="./assets/icons/Subha logo.svg" alt="">
+        <button class="langBtn">EN</button>
+    </header>
     <main class="mainGrid">
         <section class="fullWidth fullHeight fullMediaWrapper">
             <!-- <video src="./assets/video/dummyVid.mp4" autoplay loop></video> -->
@@ -36,7 +39,7 @@
                 </div>
             </div>
         </section>
-        <section class="breakout">
+        <section class="breakout sectionGap">
             <h2 class="txtCenter">Why is our Subha unique?</h2>
             <div class="whyContainer">
                 <div class="txtWrapperLeft">
@@ -79,7 +82,8 @@
             </div>
         </section>
 
-        <section class="breakoutFullwidth sectionGap productSliderSection">
+        <section class="mainGrid fullCol sectionGap productSliderSection greyBg">
+            <div class="breakoutFullwidth">
             <h2>Our Products</h1>
             <div class="productSliderGrid">
                 <div id="txtSplide" class="splideTxt splide" role="group" aria-label="Text Slider">
@@ -89,6 +93,7 @@
                                 <div class="txtWrapper">
                                     <h3 class="lgFS">Kandorah Subha</h3>
                                     <p>A unique blue-white color, the exceptional “Juwait” of the modern Emirati Kandorah, a shade that we finally obtained in our 3D printers to make our color matching Subhas reflecting the Emirati Kandorah, designed with classic shape and size beads.</p>
+                                    <a href="#">Shop Now</a>
                                 </div>
                             </li>
                             <li class="splide__slide">
@@ -118,22 +123,22 @@
                           <ul class="splide__list">
                               <li class="splide__slide">
                                 <div class="slide">
-                                    <img src="./assets/images/kandoora_1-1090x1536.jpg" alt="">
+                                    <img src="./assets/images/kandoora_1-1090x1536.jpg" data-splide-lazy="./assets/images/kandoora_1-1090x1536.jpg" alt="">
                                 </div>
                               </li>
                               <li class="splide__slide">
                                 <div class="slide">
-                                    <img src="./assets/images/deep-ocean_2-1090x1536.jpg" alt="">
+                                    <img src="./assets/images/deep-ocean_2-1090x1536.jpg" data-splide-lazy="./assets/images/deep-ocean_2-1090x1536.jpg" alt="">
                                 </div>
                               </li>
                               <li class="splide__slide">
                                 <div class="slide">
-                                    <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                                    <img src="./assets/images/mini-black_3-1090x1536.jpg" data-splide-lazy="./assets/images/mini-black_3-1090x1536.jpg" alt="">
                                 </div>
                               </li>
                               <li class="splide__slide">
                                 <div class="slide">
-                                    <img src="./assets/images/mini-white_3-1090x1536.jpg" alt="">
+                                    <img src="./assets/images/mini-white_3-1090x1536.jpg" data-splide-lazy="./assets/images/mini-white_3-1090x1536.jpg" alt="">
                                 </div>
                               </li>
                           </ul>
@@ -141,12 +146,10 @@
                     <script defer>
                         document.addEventListener("DOMContentLoaded", function() {
                             const imgSplide = document.getElementById('imgSplide');
-                            const splideList = document.querySelector('.splide__list');
-                        
+                            const splideList = imgSplide.querySelector('.splide__list');
                             function updateMinHeight() {
                                 const liElements = imgSplide.querySelectorAll('li');
                                 let maxHeight = 0;
-                        
                                 liElements.forEach(li => {
                                     const liHeight = li.offsetHeight;
                                     if (liHeight > maxHeight) {
@@ -158,7 +161,7 @@
                             }
                         
                             // Initial call to set the min-height
-                            updateMinHeight();
+                            setTimeout(updateMinHeight, 500);
                         
                             // Listen for resize events to update min-height dynamically
                             window.addEventListener('resize', updateMinHeight);
@@ -168,8 +171,192 @@
                   </div>
             </div>
             <script defer src="./assets/js/splideInit.js"></script>
+        </div>
+        </section>
+        <section class="breakoutFullwidth sectionGap">
+            <div class="miniSlideGrid">
+                <div class="txtWrapper">
+                    <div id="imgSplideMiniLeft" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <h2>Mini Subha</h2>
+                                </li>
+                                <li class="splide__slide">
+                                    <h2>Mini Subha 2</h2>
+                                </li>
+                                <li class="splide__slide">
+                                    <h2>Mini Subha 3</h2>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <div id="imgSplideMini" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                        <li class="splide__slide"> 
+                        <div class="slide">
+                            <img src="./assets/images/mini-black_3-1090x1536.jpg" alt="">
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="mainGrid fullCol sectionGap greyBg">
+            <div class="breakout">
+                <h2 class="txtCenter">We are available at</h2>
+                <div class="logoGrid">
+                    <div class="grid-item">
+                        <div class="logo-wrapper">
+                            <img src="./assets/logos/cities-store.png" alt="">
+                        </div>
+                        <ul class="addressList">
+                            <li>
+                                <img src="./assets/icons/LocationIcon.svg" alt="">
+                                <span>Galleria Mall Al Barsha - Gigi Boutique</span>
+                             </li>
+                            <li>
+                                <img src="./assets/icons/LocationIcon.svg" alt="">
+                                <span>Galleria Mall Al Wasl</span>
+                             </li>
+                        </ul>
+
+                    </div>
+                    <div class="grid-item">
+                        <div class="logo-wrapper">
+                            <img src="./assets/logos/MuseumOfTheFuture-logo.png" alt="">
+                        </div>
+                        <ul class="addressList">
+                            <li>
+                                <img src="./assets/icons/LocationIcon.svg" alt="">
+                                <span>Sheikh Zayed Road - Commercial Center</span>
+                             </li>
+                        </ul>
+
+                    </div>
+                    <div class="grid-item">
+                        <div class="logo-wrapper">
+                            <img src="./assets/logos/tp-logo.png" alt="">
+                        </div>
+                        <ul class="addressList">
+                            <li>
+                                <img src="./assets/icons/LocationIcon.svg" alt="">
+                                <span>Kingdom of Saudi Arabia</span>
+                             </li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <div class="logo-wrapper">
+                            <img src="./assets/logos/Louvre_AbuDhabi.png" alt="">
+                        </div>
+                        <ul class="addressList">
+                            <li>
+                                <img src="./assets/icons/LocationIcon.svg" alt="">
+                                <span>The store is in the cultural district of Saadiyat Island</span>
+                             </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fullWidth sectionGapEnd instagramSection">
+            <div class="topPart txtCenter">
+
+                <h2>
+                    Follow us on Instagram
+                </h2>
+                <span class="txtHeadingGrey w300">@subhadesign</span>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="fullWidth footerBg sectionGap footerSection">
+        <div class="logoWrapper"> <img src="./assets/icons/Subha footer log .svg" alt=""> </div>
+        <div class="iconGrid">
+           <a href="#"> <div class="grid-item"><img src="./assets/icons/x_logo.svg.svg" alt=""></div> </a>
+            <a href="#"> <div class="grid-item"><img src="./assets/icons/instagram_logo.svg.svg" alt=""></div> </a>
+            <a href="#"> <div class="grid-item"><img src="./assets/icons/tiktok_symbol.svg.svg" alt=""></div> </a>
+            <a href="#"> <div class="grid-item"><img src="./assets/icons/facebook_symbol.svg.svg" alt=""></div> </a>
+            <a href="#"> <div class="grid-item"><img src="./assets/icons/Threads_(app)_logo 1_layerstyle.svg" alt=""></div> </a>
+        </div>
+        <span>All rights reserved ©️ Subha Design 2024</span>
+    </footer>
 </body>
 </html>
