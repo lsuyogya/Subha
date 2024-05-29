@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage: imgSlidePerPage,
     updateOnMove: true,
     lazyload: 'sequential',
+    focus: 1,
     breakpoints: {
       768: {
         perPage: 1,
@@ -63,4 +64,19 @@ document.addEventListener('DOMContentLoaded', function () {
   mini.sync(mini2);
   mini.mount();
   mini2.mount();
+
+  // thumbnails.on('move', function (newIndex) {
+  //   // Get the list of slides
+  //   var list = thumbnails.Components.Elements.list;
+  //   var slides = thumbnails.Components.Elements.slides;
+
+  //   // Get the active slide
+  //   var activeSlide = slides[newIndex];
+
+  //   // Reorder the slides
+  //   list.prepend(activeSlide);
+
+  //   // Refresh thumbnails to update the order
+  //   thumbnails.refresh();
+  // });
 });
