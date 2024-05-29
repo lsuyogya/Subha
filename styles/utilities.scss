@@ -7,10 +7,16 @@
 .breakoutFullwidth {
   grid-column-start: breakout-start;
   grid-column-end: fullWidth-end;
+  @media (max-width: 768px) {
+    grid-column-end: breakout-end;
+  }
 }
 .contentFullwidth {
   grid-column-start: breakout-start;
   grid-column-end: fullWidth-end;
+  @media (max-width: 768px) {
+    grid-column-end: breakout-end;
+  }
 }
 .content {
   grid-column: content;
