@@ -277,18 +277,35 @@
         <section class="breakoutFullwidth sectionGap">
             <div class="miniSlideGrid">
                 <div class="txtWrapper">
+                    <h2>Mini Subha</h2>
                     <div id="imgSplideMiniLeft" class="splide">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <h2>Mini Subha</h2>
                                 </li>
-                                <li class="splide__slide">
-                                    <h2>Mini Subha 2</h2>
-                                </li>
-                                <li class="splide__slide">
-                                    <h2>Mini Subha 3</h2>
-                                </li>
+                                <script defer>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        // Get the #imgSplideMini element
+                                        const imgSplideMini = document.querySelector('#imgSplideMini');
+                                        
+                                        // Count the number of <li> elements inside #imgSplideMini
+                                        const liCount = imgSplideMini.querySelectorAll('li').length;
+                                        
+                                        // Calculate the number of new <li> elements to create (one less than the count)
+                                        const newLiCount = liCount - 1;
+                                        
+                                        // Get the <ul> inside #imgSplideMiniLeft
+                                        const imgSplideMiniLeftUl = document.querySelector('#imgSplideMiniLeft ul');
+                                        
+                                        // Create and append the new <li> elements
+                                        for (let i = 0; i < newLiCount; i++) {
+                                            const newLi = document.createElement('li');
+                                            newLi.className = 'splide__slide';
+                                            imgSplideMiniLeftUl.appendChild(newLi);
+                                        }
+                                    });
+
+                                </script>
                             </ul>
                         </div>
                     </div>

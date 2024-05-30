@@ -499,6 +499,13 @@ h6,
   height: 25px;
   width: 25px;
 }
+@media screen and (max-width: 768px) {
+  .splide__arrows {
+    position: relative;
+    padding-block: 0.5rem;
+    height: calc(25px + 1rem);
+  }
+}
 
 .splide__track {
   height: calc(100% - var(--_arrows-height, 2rem));
@@ -511,6 +518,7 @@ h6,
 }
 .splideImg {
   --_width: 30%;
+  display: grid;
 }
 .splideImg ul {
   align-items: center;
@@ -520,6 +528,11 @@ h6,
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .splideImg li img {
+    max-height: 300px;
+  }
 }
 @media (min-width: 768px) {
   .splideImg li.is-active {

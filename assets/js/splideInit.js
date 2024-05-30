@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
     flickMaxPages: 1,
     perPage: 1,
     updateOnMove: true,
+    breakpoints: {
+      768: {
+        arrows: false,
+      },
+    },
   });
 
   var thumbnails = new Splide('#imgSplide', {
@@ -26,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     breakpoints: {
       768: {
         perPage: 1,
+        arrows: true,
       },
     },
   });
@@ -42,7 +48,8 @@ document.addEventListener('DOMContentLoaded', function () {
     lazyload: 'sequential',
     breakpoints: {
       768: {
-        perPage: 1,
+        perPage: 2,
+        arrows: true,
       },
     },
   });
@@ -56,6 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
     perPage: 1,
     updateOnMove: true,
     lazyload: 'sequential',
+    breakpoints: {
+      768: {
+        arrows: false,
+      },
+    },
   });
 
   main.sync(thumbnails);

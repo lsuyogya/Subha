@@ -221,6 +221,12 @@
     height: 25px;
     width: 25px;
   }
+  @media screen and (max-width: 768px) {
+    position: relative;
+    padding-block: 0.5rem;
+    height: calc(25px + 1rem);
+    // order: 9;
+  }
 }
 .splide__track {
   height: calc(100% - var(--_arrows-height, 2rem));
@@ -232,6 +238,7 @@
 }
 .splideImg {
   --_width: 30%;
+  display: grid;
   ul {
     align-items: center;
   }
@@ -240,6 +247,11 @@
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     align-items: center;
+    @media (max-width: 768px) {
+      img {
+        max-height: 300px;
+      }
+    }
     @media (min-width: 768px) {
       &.is-active {
         width: var(--_width) !important;
