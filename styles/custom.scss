@@ -229,7 +229,7 @@
     // order: 9;
   }
 }
-.rtl .splide__arrows > :first-child {
+:root[style*='direction: rtl'] .your-element-class {
   order: 1;
 }
 .splide__track {

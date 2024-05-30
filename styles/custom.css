@@ -507,7 +507,7 @@ h6,
   }
 }
 
-.rtl .splide__arrows > :first-child {
+:root[style*="direction: rtl"] .your-element-class {
   order: 1;
 }
 
