@@ -328,6 +328,11 @@ h6,
   }
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body.arabic {
   --secondaryFont: var(--arabicFont);
   --primaryFont: var(--arabicFont);
