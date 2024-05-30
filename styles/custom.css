@@ -96,10 +96,20 @@
   grid-column-start: breakout-start;
   grid-column-end: fullWidth-end;
 }
+@media (max-width: 768px) {
+  .breakoutFullwidth {
+    grid-column-end: breakout-end;
+  }
+}
 
 .contentFullwidth {
   grid-column-start: breakout-start;
   grid-column-end: fullWidth-end;
+}
+@media (max-width: 768px) {
+  .contentFullwidth {
+    grid-column-end: breakout-end;
+  }
 }
 
 .content {
@@ -297,6 +307,20 @@ h6,
   font-family: var(--primaryFont);
   font-size: var(--regualarFS);
 }
+@media screen and (max-width: 768px) {
+  :root {
+    --largeHeadingFS: 42px;
+    --largeHeadingLH: 41px;
+    --h2FS: 28px;
+    --h2LH: 27px;
+    --lgFS: 32px;
+    --headingFS: 32px;
+    --regualarFS: 14px;
+    --mdFS: 14px;
+    --smFS: 12px;
+    --sectionGap: 4rem;
+  }
+}
 
 .mainGrid {
   --content-size: 1280px;
@@ -479,6 +503,10 @@ h6,
   height: calc(100% - var(--_arrows-height, 2rem));
 }
 
+.splide__list {
+  max-width: calc(100vw - 2 * var(--padding-inline));
+}
+
 .splideImg {
   --_width: 30%;
 }
@@ -551,8 +579,12 @@ h6,
 
 .logoGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+}
+@media (min-width: 768px) {
+  .logoGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .logoGrid .logo-wrapper {
   display: grid;
