@@ -92,11 +92,15 @@ document.addEventListener('DOMContentLoaded', function () {
     .addEventListener('click', function () {
       // Toggle the direction
       const root = document.documentElement;
+      const body = document.body;
       const isRtl = root.style.direction === 'rtl';
       const newDirection = isRtl ? 'ltr' : 'rtl';
 
       // Change the direction in the root element
       root.style.direction = newDirection;
+
+      // Toggle the arabic class on the body element
+      body.classList.toggle('arabic');
 
       // Re-initialize Splide instances with the new direction
       document.querySelectorAll('.splide').forEach((instance) => {

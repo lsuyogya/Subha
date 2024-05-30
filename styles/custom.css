@@ -86,6 +86,11 @@
   font-style: italic;
   font-weight: 400;
 }
+@font-face {
+  font-family: "NotoKufiArabic";
+  src: url("../assets/font/NotoKufiArabic-VariableFont_wght.ttf");
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -302,6 +307,7 @@ h6,
   --secondaryFont: "PlayfairDisplay";
   --primaryFont: "Khula";
   --tertiaryFont: "Lato";
+  --arabicFont: "NotoKufiArabic";
   --sectionGap: 8rem;
   --padding-inline: 2rem;
   font-family: var(--primaryFont);
@@ -320,6 +326,12 @@ h6,
     --smFS: 12px;
     --sectionGap: 4rem;
   }
+}
+
+body.arabic {
+  --secondaryFont: var(--arabicFont);
+  --primaryFont: var(--arabicFont);
+  --tertiaryFont: var(--arabicFont);
 }
 
 .mainGrid {
