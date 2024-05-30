@@ -519,7 +519,7 @@ body.arabic {
   }
 }
 
-:root[style*="direction: rtl"] .your-element-class {
+.arabic .splide__arrows > :first-child {
   order: 1;
 }
 

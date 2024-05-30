@@ -235,9 +235,10 @@ body.arabic {
     // order: 9;
   }
 }
-:root[style*='direction: rtl'] .your-element-class {
+.arabic .splide__arrows > :first-child {
   order: 1;
 }
+
 .splide__track {
   height: calc(100% - var(--_arrows-height, 2rem));
 }
