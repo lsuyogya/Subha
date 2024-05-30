@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     isNavigation: true,
     flickMaxPages: 1,
-    perPage: 3,
+    perPage: 5,
     updateOnMove: true,
     lazyload: 'sequential',
     breakpoints: {
