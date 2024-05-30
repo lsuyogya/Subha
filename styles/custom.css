@@ -711,5 +711,11 @@ h6,
     top: -100%;
   }
 }
+@media (max-width: 768px) {
+  .ifrmeContainer iframe {
+    width: 178vh;
+    height: 100%;
+  }
+}
 
 /*# sourceMappingURL=custom.css.map */
