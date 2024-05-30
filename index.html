@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/custom.css">
     <link rel="stylesheet" href="./styles/splide-core.min.css">
+    <link rel="stylesheet" href="./styles/aos.css">
     <script defer src="./assets/js/splide.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
 </head>
 <body>
     <header class="headerSection">
@@ -48,7 +50,7 @@
             </div>
         </section>
 
-        <section class="breakout overlappingSection"> 
+        <section class="breakout overlappingSection" data-aos="fade-up" > 
             <div class="grid-item imgWrapper">
                 <img src="./assets/images/About subha black bg.png" alt="">
             </div>
@@ -66,7 +68,7 @@
         <section class="breakout sectionGap">
             <h2 class="txtCenter">Why is our Subha unique?</h2>
             <div class="whyContainer">
-                <div class="txtWrapperLeft">
+                <div class="txtWrapperLeft" data-aos="fade-right" data-aos-delay="50">
                     <div class="txtItem">
                         <div class="txtHeadingGrey w700 mdTxt upper">Create with PLA</div>
                         <div class="icon"><img src="./assets/icons/PLA.svg" alt=""></div>
@@ -83,10 +85,10 @@
                         <div class="description">The 33 beads are combined using cotton or silk by hand. </div>
                     </div>
                 </div>
-                <div class="imgWrapper">
+                <div class="imgWrapper" data-aos="fade-down">
                     <img src="./assets/images/Unique 1.png" alt="">
                 </div>
-                <div class="txtWrapperRight">
+                <div class="txtWrapperRight" data-aos="fade-left" data-aos-delay="50">
                     <div class="txtItem">
                         <div class="txtHeadingGrey w700 mdTxt upper">Variety of Colors</div>
                         <div class="icon"><img src="./assets/icons/VarietyofColors.svg" alt=""></div>
@@ -110,7 +112,7 @@
             <div class="breakoutFullwidth">
             <h2>Our Products</h1>
             <div class="productSliderGrid">
-                <div id="txtSplide" class="splideTxt splide" role="group" aria-label="Text Slider">
+                <div id="txtSplide" class="splideTxt splide" role="group" aria-label="Text Slider" data-aos="fade-right">
                     <div class="splide__track">
                           <ul class="splide__list">
                               <li class="splide__slide">
@@ -184,7 +186,7 @@
                     </div>
                   </div>
 
-                  <div id="imgSplide" class="splideImg splide" role="group" aria-label="Image Slider">
+                  <div id="imgSplide" class="splideImg splide" role="group" aria-label="Image Slider" data-aos="fade-left">
                     <div class="splide__track">
                           <ul class="splide__list">
                               <li class="splide__slide">
@@ -310,7 +312,7 @@
                         </div>
                     </div>
                 </div>
-            <div id="imgSplideMini" class="splide">
+            <div id="imgSplideMini" class="splide" data-aos="fade-left">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide"> 
@@ -401,7 +403,7 @@
         <section class="mainGrid fullCol sectionGap greyBg">
             <div class="breakout">
                 <h2 class="txtCenter">We are available at</h2>
-                <div class="logoGrid">
+                <div class="logoGrid" >
                     <div class="grid-item">
                         <div class="logo-wrapper">
                             <img src="./assets/logos/cities-store.png" alt="">
@@ -482,6 +484,14 @@
     document.body.classList.add('rtl');
   }
 });
+    </script>
+    <script defer>
+          AOS.init({
+            disable:'phone',
+            duration:300,
+            delay:10,
+            offset: 200,
+          });
     </script>
 </body>
 </html>
