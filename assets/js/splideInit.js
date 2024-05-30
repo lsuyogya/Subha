@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     isNavigation: true,
     flickMaxPages: 1,
-    perPage: imgSlidePerPage,
+    perPage: 5,
     updateOnMove: true,
     lazyload: 'sequential',
     focus: 1,
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     arrows: false,
     isNavigation: true,
     flickMaxPages: 1,
-    perPage: 5,
+    perPage: 3,
     updateOnMove: true,
     lazyload: 'sequential',
     breakpoints: {

@@ -194,6 +194,7 @@
 .productSliderGrid {
   --_arrows-height: 2rem;
   display: grid;
+  overflow: hidden;
   @media (min-width: 768px) {
     grid-template-columns: 30% 70%;
   }
@@ -224,8 +225,10 @@
 .splide__track {
   height: calc(100% - var(--_arrows-height, 2rem));
 }
-.splide__list {
-  max-width: calc(100vw - 2 * var(--padding-inline));
+@media (max-width: 768px) {
+  .splide__list {
+    max-width: calc(100vw - 2 * var(--padding-inline));
+  }
 }
 .splideImg {
   --_width: 30%;

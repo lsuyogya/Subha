@@ -469,6 +469,7 @@ h6,
 .productSliderGrid {
   --_arrows-height: 2rem;
   display: grid;
+  overflow: hidden;
   gap: 2rem;
 }
 @media (min-width: 768px) {
@@ -503,10 +504,11 @@ h6,
   height: calc(100% - var(--_arrows-height, 2rem));
 }
 
-.splide__list {
-  max-width: calc(100vw - 2 * var(--padding-inline));
+@media (max-width: 768px) {
+  .splide__list {
+    max-width: calc(100vw - 2 * var(--padding-inline));
+  }
 }
-
 .splideImg {
   --_width: 30%;
 }
