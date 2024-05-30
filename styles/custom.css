@@ -97,6 +97,20 @@
   margin: 0;
 }
 
+:root {
+  --favicon-filter: none;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --favicon-filter: invert(1);
+  }
+}
+#favicon {
+  filter: var(--favicon-filter);
+}
+
 .breakoutFullwidth {
   grid-column-start: breakout-start;
   grid-column-end: fullWidth-end;

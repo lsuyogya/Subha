@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Subha</title>
     <link rel="stylesheet" href="./styles/custom.css">
     <link rel="stylesheet" href="./styles/splide-core.min.css">
     <link rel="stylesheet" href="./styles/aos.css">
+    <link id="favIcon" rel="icon" type="image/png" href="./assets/icons/subha-fav-icon.png"/>
     <script defer src="./assets/js/splide.min.js"></script>
     <script src="./assets/js/aos.js"></script>
 </head>
@@ -492,6 +493,22 @@
             delay:10,
             offset: 200,
           });
+    </script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+  function updateFavicon() {
+    const favicon = document.getElementById('favicon');
+    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    favicon.style.filter = darkMode ? 'invert(1)' : 'none';
+  }
+
+  // Initial check
+  updateFavicon();
+
+  // Listen for changes in the dark mode preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+});
     </script>
 </body>
 </html>
