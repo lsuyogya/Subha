@@ -1,6 +1,11 @@
-const imgSlidePerPage = 3;
-const marginRight = '6.67px';
 document.addEventListener('DOMContentLoaded', function () {
+  // Check if :root has direction: rtl
+  const isRtl = getComputedStyle(document.documentElement).direction === 'rtl';
+
+  const rtlOptions = isRtl
+    ? { paginationDirection: 'rtl', direction: 'rtl' }
+    : {};
+
   var main = new Splide('#txtSplide', {
     type: 'fade',
     rewind: true,
@@ -13,11 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: false,
       },
     },
+    ...rtlOptions, // Spread rtlOptions if RTL detected
   });
 
   var thumbnails = new Splide('#imgSplide', {
-    //   fixedWidth  : 100,
-    //   fixedHeight : 60,
     gap: 10,
     rewind: true,
     pagination: false,
@@ -34,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: true,
       },
     },
+    ...rtlOptions, // Spread rtlOptions if RTL detected
   });
 
   var mini = new Splide('#imgSplideMini', {
@@ -52,7 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: true,
       },
     },
+    ...rtlOptions, // Spread rtlOptions if RTL detected
   });
+
   var mini2 = new Splide('#imgSplideMiniLeft', {
     gap: 10,
     rewind: true,
@@ -68,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: false,
       },
     },
+    ...rtlOptions, // Spread rtlOptions if RTL detected
   });
 
   main.sync(thumbnails);
@@ -76,19 +84,4 @@ document.addEventListener('DOMContentLoaded', function () {
   mini.sync(mini2);
   mini.mount();
   mini2.mount();
-
-  // thumbnails.on('move', function (newIndex) {
-  //   // Get the list of slides
-  //   var list = thumbnails.Components.Elements.list;
-  //   var slides = thumbnails.Components.Elements.slides;
-
-  //   // Get the active slide
-  //   var activeSlide = slides[newIndex];
-
-  //   // Reorder the slides
-  //   list.prepend(activeSlide);
-
-  //   // Refresh thumbnails to update the order
-  //   thumbnails.refresh();
-  // });
 });

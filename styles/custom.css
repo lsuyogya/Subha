@@ -507,6 +507,10 @@ h6,
   }
 }
 
+.rtl .splide__arrows > :first-child {
+  order: 1;
+}
+
 .splide__track {
   height: calc(100% - var(--_arrows-height, 2rem));
 }
